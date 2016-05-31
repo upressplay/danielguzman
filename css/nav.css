@@ -1,0 +1,154 @@
+nav {
+	position: absolute;
+	width: 100%;
+	background-color: #2e65a9;
+	overflow: hidden;
+	z-index: 1000;
+	display: none;
+	top:0rem;
+	left:0rem;
+}
+@media (min-width: 900px) { 
+	nav {
+		position: absolute;
+		width: 100%;
+		background-color: #2e65a9;
+		overflow: hidden;
+	}
+}
+
+#nav_btns_toggle{
+	float: left;
+	height:0;
+
+	overflow-y: scroll;
+}
+
+@media (min-width: 900px) { 
+	#nav_btns_toggle {
+		float: right;
+		height: auto;
+		overflow: auto;
+	}
+}
+
+#nav_holder {
+	display: table;
+	text-align: center;
+	width: 100%;
+	height:0;
+	overflow: hidden;
+	padding-bottom: 20rem;
+}
+
+@media (min-width: 900px) { 
+	#nav_holder {
+		display: table;
+		text-align: right;
+		float: right;
+		width: 115rem;
+		padding:0 5%;
+	}
+}
+
+.nav_logo {
+	float: left;
+	width: 54rem;
+	height: 12rem;
+}
+
+@media (min-width: 900px) { 
+	.nav_logo {
+		float: left;
+		width: 45rem;
+		height: 10rem;
+	}
+}
+
+.nav_btn {
+	color: #fff;
+	display: inline-block;
+	font-family: 'sitefont', serif;
+	font-size: 6rem;
+	line-height: 14rem;
+	padding: 1rem 0rem;
+	text-align: center;
+	vertical-align: middle;
+	width:100%;
+}
+
+@media (min-width: 900px) { 
+	.nav_btn {
+		font-size: 2.5rem;
+		line-height: 4.5rem;
+		padding:1rem 1.5rem;
+		width:auto;
+	}
+}
+
+.nav_btn_icon {
+	color: #ff1f08;
+	font-size: 2.4rem;
+	line-height: 3.5rem;
+}
+
+.social_btn {
+	color: #fff;
+	display: inline-block;
+	font-size: 8rem;
+	line-height: 14rem;
+	padding: 1rem 2rem;
+	vertical-align: middle;
+}
+
+@media (min-width: 900px) { 
+	.social_btn {
+		font-size: 3.4rem;
+		line-height: 6.5rem;
+		padding:1rem 2rem;
+	}
+}
+
+#nav_toggle {
+	float: right;
+	text-align: center;
+	color: #fff;
+	padding: 2rem 3rem;
+	font-size: 7rem;
+}
+
+.img_btn {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.img_btn, .img_btn_holder, .img_btn_rest, .img_btn_roll {
+	width: 19rem;
+	height: 21rem;
+}
+
+@media (min-width: 900px) { 
+	.img_btn, .img_btn_holder, .img_btn_rest, .img_btn_roll {
+		width: 9rem;
+		height: 9.5rem;
+	}
+}
+
+.img_btn_holder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.img_btn_rest {
+	position: absolute;
+}
+.img_btn_roll {
+	position: absolute;
+	opacity: 0;
+}
+.img_btn img {
+	width: 100%;
+	height:auto;
+}
+
+
