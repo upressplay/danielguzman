@@ -1,6 +1,6 @@
 
 <div id="gallery">
-<div id="gallery_title" class="section_title black_title">
+<div id="gallery_title" class="section_title blue_title">
 	- Gallery -	
 </div><!-- gallery_title -->
 	<?php 

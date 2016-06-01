@@ -43,7 +43,7 @@ site.gallery = {
 
         if(site.device == "desktop") {
             $('#load_more_gallery_btn').mouseenter(function (event){  
-               TweenMax.to($( this ), .25, {color:"#fff", backgroundColor:'#d90e0e', ease:"Power1.easeInOut", overwrite:2}); 
+               TweenMax.to($( this ), .25, {color:"#000", backgroundColor:'#2e65a9', ease:"Power1.easeInOut", overwrite:2}); 
             });
 
             $('#load_more_gallery_btn').mouseleave(function (event){  

@@ -1,9 +1,10 @@
 
 #contact {
 	float: left;
-	background-color: #000;
+	background-color: #fff;
 	width: 90%;
 	padding: 5%;
+	
 }
 
 
@@ -14,15 +15,18 @@
 #contact_info {
 	float: left;
 	width:100%;
-	color:#fff;
+	color:#000;
 	font-family: Arial, san-serif;
 	font-size: 2.4rem;
 	line-height: 3rem;
+	display: table;
+	text-align: center;
 }
 
 #contact_left {
 	float: left;
 	width: 50%;
+	display: 
 }
 #contact_right {
 	float: left;
@@ -32,24 +36,34 @@
 
 #contact a:link {
 	border: none;
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 }
 
 #contact a:visited {
 	border: none;
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 }
 
 #contact a:active {
 	border: none;
-	color: #fff;
+	color: #000;
 	text-decoration: none;
 }
 
 #contact a:hover {
 	border: none;
-	color: #fff;
+	color: #2e65a9;
 	text-decoration: underline;
+}
+
+.contact {
+	font-family: Arial, san-serif;
+	display: inline-block;
+	vertical-align: middle;
+	padding:2rem;
+}
+.contact_title {
+	font-weight: bold;
 }

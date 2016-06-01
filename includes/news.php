@@ -1,5 +1,5 @@
 <div id="news">
-	<div id="news_title" class="section_title black_title">
+	<div id="news_title" class="section_title white_title">
 		- News -
 	</div><!-- services_title -->
 	<div id="news_container">

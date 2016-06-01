@@ -1,5 +1,5 @@
 <div id="about">
-	<div id="about_title" class="section_title black_title">
+	<div id="about_title" class="section_title blue_title">
 		- About -
 	</div><!-- about_title -->
 	<div id="about_desc" class="black_txt">

@@ -17,13 +17,13 @@
       <div class="nav_btn">About</div>
       <!-- about --></a>
 
+      <a href="/headshots/" target="_self">
+        <div class="nav_btn">Headshots</div>
+      <!-- headshots --></a>
+
       <a href="/videos/" target="_self">
       <div class="nav_btn">Videos</div>
       <!-- videos --></a>
-
-       <a href="/headshots/" target="_self">
-        <div class="nav_btn">Headshots</div>
-      <!-- headshots --></a>
 
       <a href="/resume/" target="_self">
       <div class="nav_btn">Resume</div>
@@ -38,18 +38,28 @@
       <div class="nav_btn">News</div>
       <!-- news --></a>
 
-      <a href="https://www.instagram.com/firstcomeslike/" target="_blank">
+      <a href="/contact/" target="_self">
+      <div class="nav_btn">Contact</div>
+      <!-- contact --></a>
+
+      <a href="https://www.instagram.com/danielguzman/" target="_blank">
       	<div type="instagram" class="social_btn">
       		<span class="fa fa-instagram" aria-hidden="true" ></span>
       		<span class="screen-reader-text">Instagram</span>
       	</div>
       <!-- instagram -->
   	</a>
-  	<a href="https://www.facebook.com/firstcomeslikemovie  " target="_blank">
+  	<a href="https://www.facebook.com/profile.php?id=769484782&fref=ts" target="_blank">
       <div type="facebook" class="social_btn"><span class="fa fa-facebook" aria-hidden="true" ></span><span class="screen-reader-text">Facebook</span></div>
+      <!-- facebook --></a>
+
+      <a href="https://www.youtube.com/channel/UC56aL3gD4UKnxVHDVvI8wKA" target="_blank">
+      <div type="facebook" class="social_btn"><span class="fa fa-youtube" aria-hidden="true" ></span><span class="screen-reader-text">Youtube</span></div>
       <!-- linkedin --></a>
 
-
+      
+      
+      
 
       <a href="http://www.imdb.com/name/nm1684610/" target="_blank">
       <div class="img_btn">

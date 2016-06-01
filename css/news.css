@@ -1,9 +1,9 @@
 
 #news {
 	float: left;
-	background-color: #fff;
+	background-color: #2e65a9;
 	width: 100%;
-	color: #000;
+	color: #fff;
 	text-align: center;
 	padding:6% 0;
 }
@@ -11,11 +11,6 @@
 
 @media (min-width: 900px) { 
 	#news {
-		float: left;
-		background-color: #fff;
-		width: 100%;
-		color: #000;
-		text-align: center;
 		padding-top:3%;
 	}
 }
@@ -54,7 +49,7 @@
 		cursor: pointer;
 		width: 6.8rem;
 		height: 11.4rem;
-		margin: 15rem 0;
+		margin: 15rem 0 20rem 0;
 	}
 }
 
@@ -73,7 +68,7 @@
 		cursor: pointer;
 		width: 6.8rem;
 		height: 11.4rem;
-		margin: 15rem 0;
+		margin: 15rem 0 20rem 0;
 	}
 }
 
@@ -84,7 +79,7 @@
 
 .news_entry {
 	position: absolute;
-	color: #000;
+	color: #fff;
 	text-align: center;
 } 
 
@@ -119,8 +114,8 @@
 @media (min-width: 900px) { 
 	.news_title {
 		font-family: 'sitefont';
-		font-size: 4rem;
-		line-height: 4rem;
+		font-size: 2.8rem;
+		line-height: 3.5rem;
 		margin: 2rem 0;
 	} 
 }
@@ -171,7 +166,7 @@
 	height:0;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	background-color: #fff;
+	background-color: #2e65a9;
 }
 #news_article {
 }
@@ -191,8 +186,8 @@
 #news_nav {
 	float: left;
 	width: 100%;
-	background-color: #fff;
-	color: #000;
+	background-color: #2e65a9;
+	color: #fff;
 }
 
 .news_article_btn {
@@ -239,7 +234,7 @@
 	font-size: 8rem;
 	line-height: 9rem;
 	margin: 2rem 4rem 1rem 4rem;
-	color: #d90e0e;
+	color: #fff;
 
 }
 
@@ -251,7 +246,7 @@
 		font-size: 5rem;
 		line-height: 6.2rem;
 		margin: 2rem 4rem 1rem 4rem;
-		color: #d90e0e;
+		color: #fff;
 
 	}
 }
@@ -264,6 +259,7 @@
 	font-size: 3rem;
 	line-height: 4rem;
 	margin: 1rem 3rem 4rem 3rem;
+	color: #fff;
 	
 }
 

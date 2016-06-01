@@ -176,6 +176,27 @@ function create_site_post_types() {
 		)
 	);
 
+	register_post_type( 'contact',
+		array(
+			'labels' => array(
+				'name' => 'Contact',
+				'singular_name' => 'Contact',
+				'add_new' => 'Add Contact',
+			),
+			'public' => true,
+			'show_ui' => true,
+			'show_in_nav_menus' => false,
+			'query_var' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_nav_menus' => true,
+			'can_export' => true,
+			'hierarchical' => false,
+			'exclude_from_search' => true,
+			'rewrite' => array('slug' => 'contact','with_front' => false),
+		)
+	);
+
 
 }
 

@@ -10,7 +10,7 @@ site.nav = {
     data:[],
     loading:false,
     open:false,
-    scroll_urls:['/about/','/castcrew/','/gallery/', '/news/','/videos/', '/soundtrack/','/','/resume/'],
+    scroll_urls:['/about/','/castcrew/','/gallery/', '/news/','/videos/', '/soundtrack/','/','/resume/','/contact/','/headshots/'],
     initialize : function () {
 
         var thisobj = this;
@@ -71,7 +71,7 @@ site.nav = {
             }); 
 
             $('.nav_btn').add('.social_btn').mouseenter(function (event){  
-                TweenMax.to($( this ), .5, {color:'#000', ease:"Power1.easeInOut", overwrite:2}); 
+                TweenMax.to($( this ), .5, {color:'#aeaeae', ease:"Power1.easeInOut", overwrite:2}); 
             });
 
             $('.nav_btn').add('.social_btn').mouseleave(function (event){  
@@ -88,6 +88,9 @@ site.nav = {
             }
             site.scroll_to('#'+site.segments[1]);
         }
+
+        TweenMax.set($('.section_title'), { textShadow:".5rem .5rem .5rem rgba(0, 0, 0, 1)"});
+
         this.resize();
 
     },
@@ -98,10 +101,10 @@ site.nav = {
         
         for (i = 0; i < this.scroll_urls.length; i++) {
 
-            site.trace("nav_handler href = "+href+"this.scroll_urls[i] = "+this.scroll_urls[i]+" site.site_url = "+site.site_url)
+            site.trace("nav_handler href = "+href+" this.scroll_urls[i] = "+this.scroll_urls[i]+" site.site_url = "+site.site_url)
             if(href == this.scroll_urls[i]) {
 
-
+                site.trace("scroll yo!")
                 href = href.replace('/','');
                 href = href.replace('/','');
                 this.btn_set_url(href);
@@ -149,10 +152,10 @@ site.nav = {
     resize : function () {
 
         if(site.device == "mobile") {
-            
+            TweenMax.set($('.section_title').add('.nav_btn').add('.social_btn').add('#header_btn'), { textShadow:"2px 2px 0px rgba(0, 0, 0, 1)"});     
             
         } else {
-            
+            TweenMax.set($('.section_title').add('.nav_btn').add('.social_btn').add('#header_btn'), { textShadow:"2px 2px 0px rgba(0, 0, 0, 1)"});     
         }
 
         

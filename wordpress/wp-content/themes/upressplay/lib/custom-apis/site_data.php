@@ -99,7 +99,6 @@ class json_api_sitedata_controller {
 				'id' => $post->post_name,
 				'title' => get_the_title(),
 				'img' => get_field('news_img'),
-				'news_header' => get_field('news_header'),
 				'desc' => get_field('news_desc'),
 				'short_desc' => get_field('news_short_desc'),
 				'ext_link' => get_field('news_ext_link'),
@@ -131,7 +130,7 @@ class json_api_sitedata_controller {
 			$entry = array(
 				'id' => $post->post_name,
 				'title' => get_the_title(),
-				'desc' => get_field('77000'),
+				'desc' => get_field('gallery_desc'),
 				'img' => get_field('gallery_img'),
 				);
 			$data[] = $entry;
@@ -157,6 +156,7 @@ class json_api_sitedata_controller {
 			$entry = array(
 				'id' => $post->post_name,
 				'title' => get_the_title(),
+				'desc' => get_field('headshots_desc'),
 				'img' => get_field('headshots_img'),
 				'loaded' => false,
 				);
@@ -193,6 +193,33 @@ class json_api_sitedata_controller {
 			'data' => $data
 		);
 
+	}
+
+	public function contact () {
+
+		query_posts( array ( 'post_type' => 'contact' ) );
+
+		$data = array();
+
+		while ( have_posts() ) : the_post();
+
+			$post = get_post(get_the_ID());
+
+			$entry = array(
+				'id' => $post->post_name,
+				'title' => get_the_title(),
+				'address' => get_field('contact_address'),
+				'phone' => get_field('contact_phone'),
+				'map' => get_field('contact_map'),
+				'contacts' => get_field('contacts'),
+				);
+			$data[] = $entry;
+		endwhile;
+
+		return array(
+			'status' => 'ok',
+			'data' => $data
+		);
 	}
 
 

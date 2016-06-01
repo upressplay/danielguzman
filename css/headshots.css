@@ -22,7 +22,7 @@
 	opacity: 0;
 	vertical-align: middle;
 	width: 50%;
-	height:25rem;
+	height:67rem;
 	margin:0;
 	overflow: hidden;
 }
@@ -57,8 +57,16 @@
 #headshots_article_img {
 	float: left;
 	width:100%;
-	margin-bottom:2rem;
-	
+	padding:0 0 2rem 0;
+	background-color: #fff;
+}
+
+@media (min-width: 900px) { 
+	#headshots_article_img {
+		float: left;
+		width:80%;
+		padding: 2% 10%;
+	}
 }
 
 #headshots_article_img img {
@@ -116,7 +124,7 @@
 	font-family: 'sitefont';
 	font-size: 6rem;
 	line-height: 7.2rem;
-	margin: 2rem 4rem 1rem 4rem;
+	margin: 4rem 4rem 1rem 4rem;
 	color: #fff;
 
 }
@@ -126,7 +134,7 @@
 		width: 154rem;
 		font-size: 5rem;
 		line-height: 6.2rem;
-		margin: 2rem 4rem 1rem 4rem;
+		margin: 4rem 4rem 1rem 4rem;
 	}
 }
 

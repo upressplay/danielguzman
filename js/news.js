@@ -331,7 +331,7 @@ site.news = {
                     
                     if(site.device == "desktop") {
                         $('.news_share_btn').mouseenter(function (event){  
-                           TweenMax.to($( this ), .25, {color:"#d90e0e", ease:"Power1.easeInOut", overwrite:2}); 
+                           TweenMax.to($( this ), .25, {color:"#fff", ease:"Power1.easeInOut", overwrite:2}); 
                         });
 
                         $('.news_share_btn').mouseleave(function (event){  
@@ -346,11 +346,11 @@ site.news = {
 
                     if(site.device == "desktop") {
                         $('.news_article_btn').mouseenter(function (event){  
-                           TweenMax.to($( this ), .25, {color:"#d90e0e", ease:"Power1.easeInOut", overwrite:2}); 
+                           TweenMax.to($( this ), .25, {color:"#000", ease:"Power1.easeInOut", overwrite:2}); 
                         });
 
                         $('.news_article_btn').mouseleave(function (event){  
-                            TweenMax.to($( this ), .5, {color:"#000", ease:"Power1.easeInOut", overwrite:2}); 
+                            TweenMax.to($( this ), .5, {color:"#fff", ease:"Power1.easeInOut", overwrite:2}); 
                         });      
                     }
                            
@@ -475,7 +475,7 @@ site.news = {
 
         if(site.device == "desktop") {
             $('.news_read_more').mouseenter(function (event){  
-               TweenMax.to($( this ), .25, {color:"#fff", backgroundColor:'#d90e0e', ease:"Power1.easeInOut", overwrite:2}); 
+               TweenMax.to($( this ), .25, {color:"#000", backgroundColor:'#fff', ease:"Power1.easeInOut", overwrite:2}); 
             });
 
             $('.news_read_more').mouseleave(function (event){  
@@ -498,12 +498,16 @@ site.news = {
                 this.set_articles();
             }
             this.device_state = "mobile";    
+
+            TweenMax.set($('.news_title'), { textShadow:"2px 2px 0px rgba(0, 0, 0, 1)"});   
             
         } else {
             if(this.device_state != "desktop") {
                 this.set_articles();
             }
-            this.device_state = "desktop";       
+            this.device_state = "desktop";   
+
+            TweenMax.set($('.news_title'), { textShadow:"2px 2px 0px rgba(0, 0, 0, 1)"});       
         }
 
             

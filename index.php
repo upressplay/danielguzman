@@ -21,21 +21,21 @@
 	$header_data = json_decode($header_data, true);	
 	$header_data = $header_data['data'];
 
-	$about_data  = file_get_contents('http://danielguzman.net/wordpress/?json=sitedata/about');
+	$about_data  = file_get_contents('http://danielguzman.net/wordpress/api/sitedata/about');
 	$about_data = json_decode($about_data, true);	
 	$about_data = $about_data['data'];
 
 	$count = 0;
 	foreach ( $about_data as $a ) {
 		if($count<1) {
-			$meta_desc_default = $a['desc'];
+			$meta_desc = $a['desc'];
 			$meta_img  = $a['img']['sizes']['share'];
 		}
 		
 		$count++;
 	}
 
-	$news_data  = file_get_contents('http://firstcomeslikemovie.com/wordpress/?json=sitedata/news');
+	$news_data  = file_get_contents('http://danielguzman.net/wordpress/api/sitedata/news');
 	$news_data = json_decode($news_data, true);	
 	$news_data = $news_data['data'];
 
@@ -115,6 +115,10 @@
 	$resume_data = json_decode($resume_data, true);	
 	$resume_data = $resume_data['data'];
 
+	$contact_data  = file_get_contents('http://danielguzman.net/wordpress/api/sitedata/contact');
+	$contact_data = json_decode($contact_data, true);	
+	$contact_data = $contact_data['data'];
+
 
 ?>
 <html lang="en">
@@ -153,6 +157,7 @@
 	<link rel="stylesheet" href="/css/videos.css">
 	<link rel="stylesheet" href="/css/soundtrack.css">
 	<link rel="stylesheet" href="/css/resume.css">
+	<link rel="stylesheet" href="/css/contact.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -219,6 +224,7 @@
 				include 'includes/gallery.php';
 				include 'includes/news.php';
 				include 'includes/instagram.php';
+				include 'includes/contact.php';
 			?>
 			
 		</div><!-- site_container -->
