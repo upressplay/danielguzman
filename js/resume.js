@@ -55,7 +55,7 @@ site.resume = {
 
                     $('body').prepend('<div id="resume_overlay"></div>');
 
-                    site.set_url("resume",this.data[i].id);
+                    site.set_url("resume");
                     
                     
                     $('#resume_overlay').append('<div id="resume_nav"></div>');
@@ -82,9 +82,17 @@ site.resume = {
                             $('#resume_group_'+t).append('<div class="resume_group_role">'+this.data[i].groups[t].resume_credits[n].resume_role+'</div>');
                             $('#resume_group_'+t).append('<div class="resume_group_director">'+this.data[i].groups[t].resume_credits[n].resume_director+'</div>');
                         }
+
                     }
                     
+                    for (t = 0; t < this.data[i].skills.length; t++) {
 
+                        $('#resume_article').find('.resume_article_desc').append('<div id="resume_skills_group_'+t+'" class="resume_group"></div>');
+
+
+                        $('#resume_skills_group_'+t).append('<div class="resume_skills_title">'+this.data[i].skills[t].resume_skills_title+'</div>');
+                        $('#resume_skills_group_'+t).append('<div class="resume_skills_desc">'+this.data[i].skills[t].resume_skills_desc+'</div>');
+                    }
                   
 
                     $('#resume_article').append('<span id="resume_article_top"></span>');

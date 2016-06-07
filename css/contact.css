@@ -17,12 +17,17 @@
 	width:100%;
 	color:#000;
 	font-family: Arial, san-serif;
-	font-size: 2.4rem;
-	line-height: 3rem;
+	font-size: 3.4rem;
+	line-height: 3.5rem;
 	display: table;
 	text-align: center;
 }
-
+@media (min-width: 900px) { 
+	#contact_info {
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+}
 #contact_left {
 	float: left;
 	width: 50%;

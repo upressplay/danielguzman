@@ -3,8 +3,13 @@
 	float: left;
 	width: 100%;
 	background-color: #000;
+	padding:2% 0 2% 0;
 }
-
+@media (min-width: 900px) { 
+	#instagram {
+		padding:2% 0 2% 0;
+	}
+}
 
 .white_txt_btn {
 	font-size: 5.4rem;	
@@ -19,9 +24,14 @@
 
 #instagram_title {
 	float:left;
-	padding: 1% 5% 2% 5%;
+	padding: 4% 5% 2% 5%;
 	width: 90%;
 	background-color: #000;
+}
+@media (min-width: 900px) { 
+	#instagram_title {
+		padding: 1% 5% 2% 5%;
+	}
 }
 
 

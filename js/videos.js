@@ -7,9 +7,9 @@ $(document).ready(function(){
 site.videos = {
     id:"videos",
     data:site.videos_data,
-    set_start:-2,
+    set_start:-8,
     set_end:-1,
-    set_total:2,
+    set_total:8,
     article_open:false,
     loading:false,
     current:0,
@@ -40,7 +40,7 @@ site.videos = {
         });
 
         $('#load_more_videos_btn').click(function(event){
-            thisobj.load_more();
+            thisobj.process_data();
         });
      
         if(site.device == "desktop") {
@@ -74,13 +74,13 @@ site.videos = {
 
         for (var i = 0; i < this.data.length; i++) { 
 
-            this.data[i].loaded = false;
+            if(!this.data[i].loaded) this.data[i].loaded = false;
 
             var new_sort = true;
             var type = this.data[i].sort;
 
             for (var t = 0; t < this.sort_options.length; t++) { 
-        $('#videos_sort_options').append('<div class="sort_option">Show :</div>');
+                $('#videos_sort_options').append('<div class="sort_option">Show :</div>');
 
                 site.trace("this.sort_options[t] = "+this.sort_options[t]+" this.data[i].sort = "+this.data[i].sort);
                 if(this.sort_options[t] == this.data[i].sort) new_sort = false;
@@ -95,9 +95,10 @@ site.videos = {
         this.set_start = this.set_start + this.set_total;
         this.set_end = this.set_end + this.set_total;
 
-        if(this.set_end >= this.data.length-1) {
+        site.trace("this.set_end = "+this.set_end+" this.data.length-1 = "+this.data.length-1)
+        if(this.set_end > this.data.length-1) {
             this.set_end = this.data.length-1;
-            TweenMax.to($( '#load_more_videos_btn' ), .5, {opacity:0, onComplete:site.div_display, onCompleteParams:['#load_more_btn','none'], overwrite:2}); 
+            TweenMax.to($( '#load_more_videos_btn' ), .5, {opacity:0, onComplete:site.div_display, onCompleteParams:['#load_more_videos_btn','none'], overwrite:2}); 
         }
 
         
@@ -118,8 +119,8 @@ site.videos = {
             $('#videos_sort_options').append('<div id="sort_option_'+this.sort_options[i]+'" btnid="'+this.sort_options[i]+'" active="false" class="sort_option">'+this.sort_options[i]+'</div>');
             $('#sort_option_'+this.sort_options[i]).click(function() {
                 var active = $(this).attr('active');
-                    site.trace("active = "+active)
-                    if(active == "true") return;
+                site.trace("active = "+active)
+                if(active == "true") return;
                 var id = $(this).attr('btnid')
                 thisobj.sort(id);  
             });
@@ -148,15 +149,15 @@ site.videos = {
 
         if(val == "") val = "all";
 
-        var delay = .25;
+        var delay = .3;
 
         for (var i = 0; i < this.data.length; i++) { 
 
-            site.trace("this.data[i].type = "+this.data[i].sort+" val = "+val+" i = "+i)
+            site.trace("this.data[i].type = "+this.data[i].sort+" val = "+val+" i = "+i+" this.data[i].id = "+this.data[i].id+" this.data[i].loaded = "+this.data[i].loaded)
 
             if(val == "all" || this.data[i].sort == val) {
                 if(this.data[i].loaded) TweenMax.to($('#'+this.data[i].id), .25, { delay:delay, opacity: 1, onStart:site.div_display, onStartParams:["#"+this.data[i].id,"inline-block"], ease: "Power1.easeInOut", overwrite: 2 });
-                delay = delay + .25;
+                //delay = delay + .25;
             } else {
                 TweenMax.to($('#'+this.data[i].id), .25, { opacity: 0, onComplete:site.div_display, onCompleteParams:["#"+this.data[i].id,"none"], ease: "Power1.easeInOut", overwrite: 2 });
             }
@@ -181,18 +182,6 @@ site.videos = {
         this.sort_option = val;
     },
 
-    load_more : function () {
-        
-        this.set_start = this.set_start + this.set_total;
-        this.set_end = this.set_end + this.set_total;
-        if(this.set_end > this.data.length-1) this.set_end = this.data.length-1;
-
-        site.trace('load_more')
-        site.trace('this.set_start = '+this.set_start+" this.set_end = "+this.set_end)
-        this.build();
-
-        
-    },
 
     build : function () {
 
@@ -226,7 +215,7 @@ site.videos = {
     },
 
     thumb_loaded : function (val) {
-        //site.trace("thumb_loaded val = "+val)
+        site.trace("thumb_loaded val = "+val+" this.data[val].id = "+this.data[val].id)
         this.data[val].loaded = true;
         site.div_display('#'+this.data[val].id, "inline-block")
         TweenMax.to($('#'+this.data[val].id), .5, {opacity:1, ease:"Power1.easeInOut", ooverwrite:2}); 

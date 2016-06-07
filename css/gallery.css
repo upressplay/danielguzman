@@ -7,10 +7,14 @@
 	width: 100%;
 	color: #000;
 	text-align: center;
-	padding:2% 0 2% 0;
+	padding:6% 0 3% 0;
 }
 
-
+@media (min-width: 900px) { 
+	#gallery {
+		padding:2% 0 2% 0;
+	}
+}
 #gallery_title {
 	text-align: center;
 	margin-bottom: 3rem;

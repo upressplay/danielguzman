@@ -5,7 +5,12 @@ function site_scripts()  {
 
   
 }
-
+add_filter( 'wp_audio_shortcode', 'audio_short_fix', 10, 5 );
+function audio_short_fix( $html, $atts, $audio, $post_id, $library )
+{
+	$html = str_replace ( 'visibility: hidden;' ,'' , $html );
+	return $html;
+}
 
 
 add_action( 'wp_enqueue_scripts', 'site_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header

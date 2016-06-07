@@ -40,7 +40,7 @@
 	cursor: pointer;
 	width: 6.8rem;
 	height: 11.4rem;
-	margin: 27rem 0;
+	margin: 32rem 0;
 }
 
 @media (min-width: 900px) { 
@@ -59,7 +59,7 @@
 	cursor: pointer;
 	width: 6.8rem;
 	height: 11.4rem;
-	margin: 27rem 0;
+	margin: 32rem 0;
 
 }
 @media (min-width: 900px) { 
@@ -107,8 +107,8 @@
 .news_title {
 	font-family: 'sitefont';
 	font-size: 6rem;
-	line-height: 6.5rem;
-	margin: 1rem 0;
+	line-height: 7.5rem;
+	margin: 2rem 0;
 } 
 
 @media (min-width: 900px) { 

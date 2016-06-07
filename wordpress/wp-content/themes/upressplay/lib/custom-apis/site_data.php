@@ -184,6 +184,7 @@ class json_api_sitedata_controller {
 				'id' => $post->post_name,
 				'title' => get_the_title(),
 				'groups' => get_field('resume_group'),
+				'skills' => get_field('resume_skills'),
 				);
 			$data[] = $entry;
 		endwhile;

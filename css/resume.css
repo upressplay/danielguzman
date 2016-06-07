@@ -144,11 +144,11 @@
 @media (min-width: 900px) { 
 	.resume_article_desc {
 		float: left;
-		width: 154rem;
+		width: 144rem;
 		font-family: 'Arial';
 		font-size: 2rem;
 		line-height: 2.8rem;
-		margin: 1rem 3rem 4rem 3rem;
+		margin: 1rem 8rem 4rem 8rem;
 		
 	}
 }
@@ -230,19 +230,69 @@
 	}
 }
 .resume_group {
-	margin: 2rem auto;
+	margin: 3rem auto;
+	font-size: 2rem;
+	line-height: 4rem;
+}
+
+@media (min-width: 900px) { 
+	.resume_group {
+		margin: 3rem auto;
+		font-size: 3rem;
+		line-height: 4rem;
+	}
 }
 .resume_group_title {
 	width: 100%;
 	font-weight: bold;
-	font-size: 4rem;
-	line-height: 5.2rem;
-}
-.resume_group_production, .resume_group_role, .resume_group_director {
-	display: inline-block;
-	vertical-align: middle;	
-	width:33%;
 	font-size: 3rem;
-	line-height: 4rem;
+	line-height: 4.2rem;
 }
 
+@media (min-width: 900px) { 
+	.resume_group_title {
+		width: 100%;
+		font-weight: bold;
+		font-size: 4rem;
+		line-height: 5.2rem;
+	}
+}
+.resume_group_production{
+	display: inline-block;
+	vertical-align: middle;	
+	width:40%;
+	padding-right: 1%;
+}
+
+.resume_group_role {
+	display: inline-block;
+	vertical-align: middle;	
+	width:28%;
+	padding-right: 1%;
+}
+
+.resume_group_director {
+	display: inline-block;
+	vertical-align: middle;	
+	width:29%;
+	padding-right: 1%;
+}
+
+.resume_skills_title, .resume_skills_desc {
+	display: inline-block;
+	vertical-align: middle;	
+	width:100%;
+}
+
+.resume_skills_title {
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 4.2rem;
+}
+@media (min-width: 900px) { 
+	.resume_skills_title {
+		font-weight: bold;
+		font-size: 4rem;
+		line-height: 5.2rem;
+	}
+}
