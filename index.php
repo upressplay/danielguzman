@@ -214,7 +214,7 @@
 		include 'includes/nav.php';
 	?>
 	<div id="site_holder">
-		
+		<div id="nav_spacer"></div>
 		<div id="site_container">
 			<?php 
 				include 'includes/header.php';
@@ -223,7 +223,6 @@
 				include 'includes/videos.php';
 				include 'includes/gallery.php';
 				include 'includes/news.php';
-				include 'includes/instagram.php';
 				include 'includes/contact.php';
 			?>
 			
@@ -274,7 +273,6 @@
   	<script src="/js/header.js"></script>
   	<script src="/js/headshots.js"></script>
   	<script src="/js/news.js"></script>
-  	<script src="/js/instagram.js"></script>
   	<script src="/js/gallery.js"></script>
   	<script src="/js/videos.js"></script>
   	<script src="/js/resume.js"></script>

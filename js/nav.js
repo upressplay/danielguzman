@@ -86,7 +86,7 @@ site.nav = {
                 site.resume.open_article();
                 return;
             }
-            site.scroll_to('#'+site.segments[1]);
+            TweenMax.delayedCall(1, site.scroll_to, ['#'+site.segments[1]], this);
         }
 
         TweenMax.set($('.section_title'), { textShadow:".5rem .5rem .5rem rgba(0, 0, 0, 1)"});

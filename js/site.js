@@ -379,9 +379,15 @@ var site = {
         site.trace("this_position = "+this_position)
         var current_scroll = $( '#site_holder' ).scrollTop(  );
 
-        var final_scroll = this_position + current_scroll - ($('nav').height() * 1);
-        //final_scroll = this_position
-        TweenMax.to($( '#site_holder' ), 1, {delay:.5, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
+        site.trace("current_scroll = "+current_scroll)
+
+        var nav_height = 100 * site.scale();
+        if(site.device == "mobile") nav_height = 130 * site.scale();
+        site.trace("nav_height = "+nav_height);
+
+        var final_scroll = this_position + current_scroll - nav_height;
+        site.trace("final_scroll = "+final_scroll)
+        TweenMax.to($( '#site_holder' ), 1, {delay:.1, scrollTo:{y:final_scroll}, ease:"Power2.easeOut"});
 
     },
 
